@@ -1,5 +1,8 @@
 Repositório selecionado: <https://github.com/dbeaver/dbeaver>
-Gráfico selecionado: <![Gráfico de arquivos de produção vs arquivos de teste](image.png)>
+
+Gráfico selecionado:
+<![Gráfico de arquivos de produção vs arquivos de teste](image.png)>
+
 Explicação:
 
 ### Evolução ao longo do tempo
