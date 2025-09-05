@@ -1,89 +1,22 @@
-# Explorando evolução de código
+Repositório selecionado: <https://github.com/dbeaver/dbeaver>
+Gráfico selecionado: <![Gráfico de arquivos de produção vs arquivos de teste](image.png)>
+Explicação:
 
-Neste exercício, iremos explorar a evolução de código em sistemas reais.
+### Evolução ao longo do tempo
 
-Iremos utilizar a ferramenta [GitEvo](https://github.com/andrehora/gitevo).
-Essa ferramenta analisa a evolução de código em repositórios Git nas linguagens Python, JavaScript, TypeScript e Java, e gera relatórios `HTML` como [este](https://andrehora.github.io/gitevo-examples/python/pandas.html).
+Nesse gráfico, é possível perceber que há um crescimento constante e até linear do número de arquivos de produção, de acordo com a linha azul.
+Porém, o mesmo não acontece com a linha vermelha, que representa o número de arquivos de teste. Esta linha mostra um crescimento muito leve, quase irrisório, ao passar dos anos, e em uma proporção muito menor do que o crescimento do número de arquivos de produção.
+Ou seja, se tratando da evolução ao longo do tempo, a quantidade de arquivos de produção e de teste cresceram, porém, há uma distância muito grande na quantidade e no coeficiente de crescimento entre as duas estatísticas.
 
-Mais exemplos de relatórios podem ser podem ser encontrados em https://github.com/andrehora/gitevo-examples.
+### Curvas vs Boas práticas
 
-# Passo 1: Selecionar repositório a ser analisado
+É perceptível que a curva de crescimento de testes não acompanha a curva de crescimento de arquivos de produção. O que representa um problema no tocante às boas práticas. Isso porque, em um projeto saudável, é esperado que arquivos de teste cresçam de forma proporcional aos arquivos de produção, sendo de suma importância para o controle de qualidade do código.
 
-Selecione um repositório relevante na linguagem de sua preferência (Python, JavaScript, TypeScript ou Java).
-Você pode encontrar projetos interessantes nos links abaixo:
+### Grandes alterações nas curvas
 
-- Python: https://github.com/topics/python?l=python
-- JavaScript: https://github.com/topics/javascript?l=javascript
-- TypeScript: https://github.com/topics/typescript?l=typescript
-- Java: https://github.com/topics/java?l=java
+De forma geral, não há grandes curvas nesse gráfico. Na realidade, é impressionante que em todos os gráficos em que se tem uma comparação de tempo, percebe-se que em todos os anos analisados o crescimento foi notadamente constante, não tendo grandes picos ou quedas nos índices.
 
-# Passo 2: Instalar e rodar a ferramenta GitEvo
+### Explicações na documentação
 
-> [!NOTE]
-> Antes de instalar a ferramenta, é recomendado criar e ativar um [ambiente virtual Python](https://packaging.python.org/en/latest/guides/installing-using-pip-and-virtual-environments/#create-and-use-virtual-environments).
-
-Instale a ferramenta [GitEvo](https://github.com/andrehora/gitevo) com o comando:
-
-```
-$ pip install gitevo
-```
-
-Execute a ferramenta no repositório selecionado utilizando o comando abaixo (ajuste conforme a linguagem do repositório).
-Substitua `<git_url>` pela URL do repositório que será analisado:
-
-```shell
-# Python
-$ gitevo -r python <git_url>
-
-# JavaScript
-$ gitevo -r javascript <git_url>
-
-# TypeScript
-$ gitevo -r typescript <git_url>
-
-# Java
-$ gitevo -r java <git_url>
-```
-
-Por exemplo, para analisar o projeto Flask escrito em Python:
-
-```
-$ gitevo -r python https://github.com/pallets/flask
-```
-
-> [!NOTE]
-> Essa etapa pode demorar alguns minutos pois o projeto será clonado e analisado localmente.
-
-# Passo 3: Explorar o relatório de evolução de código
-
-Após executar a ferramenta [GitEvo](https://github.com/andrehora/gitevo), é gerado um relatório `HTML` contendo diversos gráficos sobre a evolução do código.
-
-Abra o relatório `HTML` e observe com atenção os gráficos.
-
-# Passo 4: Explicar um gráfico de evolução de código
-
-Selecione um dos gráficos de evolução e explique-o com suas palavras.
-Por exemplo, você pode:
-
-- Detalhar a evolução ao longo do tempo
-- Detalhar se as curvas estão de acordo com boas práticas
-- Explicar grandes alterações nas curvas
-- Explorar a documentação do repositório em busca de explicações para grandes alterações
-- etc.
-
-Seja criativo!
-
-# Instruções para o exercício
-
-1. Crie um `fork` deste repositório (mais informações sobre forks [aqui](https://docs.github.com/pt/pull-requests/collaborating-with-pull-requests/working-with-forks/fork-a-repo)).
-2. Adicione o relatório `HTML` no seu fork.
-3. No Moodle, submeta apenas a URL do seu `fork`.
-
-Responda às questões abaixo diretamente neste arquivo `README.md` do seu fork:
-
-1. Repositório selecionado: <URL_DO_REPOSITORIO_SELECIONADO_AQUI>
-2. Gráfico selecionado: <IMAGEM_DO_GRAFICO_SELECIONADO_AQUI>
-3. Explicação: <EXPLICACAO_AQUI>
-
-
-
+Não consegui encontrar nenhuma informação na documentação que justifique a baixa cobertura de testes. A documentação do dbeaver é muito direcionada ao usuário, contendo instruções de uso e sem muitos detalhes técnicos.
+Além disso, o crescimento linear nos índices analisados condiz com o fato do Dbeaver ser uma ferramenta em constante aprimoramento, mostrando que ao passar dos anos, mais arquivos são criados, o que mostra que novas funcionalidades estão entrando, mas, como disse anteriormente, sem picos ou quedas na quantidade de arquivos, apenas um crescimento uniforme.
